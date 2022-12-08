@@ -8,3 +8,4 @@ A memory game that focuses on selecting a pattern of colors decided by "Simon". 
 
 
 ## Domain Modeling
+![Alt text](img/Screenshot%202022-12-07%20214533.png)
