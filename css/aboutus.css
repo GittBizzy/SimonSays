@@ -1,0 +1,53 @@
+h3 {
+    text-align: center;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 30px 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  h2 {
+    color:white ;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+  }
+  p {
+    color:white ;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+  }
+  
+  #backcircle {
+    background-color: rgb(8, 4, 4);
+    border-radius: 50%;
+    box-sizing: content-box;
+    height: 100vh;
+    width: 100vh;
+    /* position: absolute; */
+    margin:auto;
+    left:25%;
+  }
+  
+  .nick {
+    height:200px;
+    width:300px;
+    position:absolute;
+    background-color: rgb(13, 153, 255);
+    /* border: 5px solid rgb(128, 180, 245); */
+    left:30%;
+    top:20%;
+    overflow: hidden;
+    border-radius:10px;
+    padding: 10px;
+
+  }
+  .nick:hover {
+    height: 300px;
+    border: 5px solid rgb(128, 180, 245);
+    transition: 3s;
+
+
+  }
