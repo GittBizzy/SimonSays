@@ -1,0 +1,42 @@
+#container1 {
+    display: flex;
+    /*   flex-direction: column; */
+    width: 250px;
+    height: 300px;
+    background-color: grey;
+    border: 1px solid red;
+}
+
+#containerChild {
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    background-color: grey;
+    border: 1px solid black;
+}
+
+#Container2 {
+    width: 250px;
+    height: 300px;
+    background-color: grey;
+    border: 1px solid yellow;
+
+}
+
+#bigContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 600px;
+    height: 750px;
+    background-color: lightblue;
+}
+
+#chart {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+
+}
