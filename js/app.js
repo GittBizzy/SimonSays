@@ -6,18 +6,23 @@ let round = 0;
 let colorsArray = [];
 let gamePlay = [];
 let userPlay = [];
+let win = false;
+let on = false;
+let playable = true;
 
-let red = new Color('red');
-let blue = new Color('blue');
-let yellow = new Color('yellow');
-let green = new Color('green');
-let purple = new Color('purple');
-let white = new Color('white');
-let orange = new Color('orange');
-let pink = new Color(`pink`);
+const red = new Color('red');
+const blue = new Color('blue');
+const yellow = new Color('yellow');
+const green = new Color('green');
+const purple = new Color('purple');
+const white = new Color('white');
+const orange = new Color('orange');
+const pink = new Color(`pink`);
+const playButton = document.querySelector("#play");
+
 
 // Constructor to create color objects
-function Color(name){
+function Color(name) {
   this.name = name;
   colorsArray.push(this);
 }
@@ -26,15 +31,15 @@ function Color(name){
 
 // Colors Array Easy
 let easyMode = [red, blue, yellow, green];
-console.log(`Easy mode`,easyMode);
+console.log(`Easy mode`, easyMode);
 
 // Colors Array Medium
 let mediumMode = [red, blue, yellow, green, purple, orange];
-console.log(`Medium mode`,mediumMode);
+console.log(`Medium mode`, mediumMode);
 
 // Colors Array Hard
 let hardMode = colorsArray;
-console.log(`Hard mode `,hardMode);
+console.log(`Hard mode `, hardMode);
 
 // get random index for our color selector
 function getRandomIndex() {
@@ -42,20 +47,58 @@ function getRandomIndex() {
 }
 
 // condition for game
-while(gamePlay === userPlay){
+while (gamePlay === userPlay) {
 
 }
 
+//#1 make play button, controller for on off switch get that one box to go through intervals of blinking
+
+playButton.addEventListener(`click`, handlePlayGame);
+
+// Event handler function to play the game
+function handlePlayGame(event) {
+  
+  if (!win && playable) {
+    playGame();
+    // computerTurn();
+    // userTurn();
+  }
+}
+
+
+//play game function
+function playGame() {
+  win = false;
+  round = 1;
+  gamePlay = [];
+  userPlay = [];
+  // playable = true;
+
+  while (!win && playable) {
+    computerTurn();
+    userTurn();
+  }
+}
+
+function computerTurn(){
+  if (computerTurn){
+    clearColor()
+  }
+
+}
 // for( let i = 0; i <40; i++){
 // console.log(getRandomIndex());
 // }
 
 // On Page Load, resume game/load player scores(Local Storage)
 
+
 // Instantiating Local Storage so that functions are still working with constructor objects.
 
 // Game Start Function, event handler, increment round.
 // Play Button, event handler(starts game), event listener-user click
+
+
 
 // to test build for loop with prompt to get user's entry for color clicks against generated array.
 
