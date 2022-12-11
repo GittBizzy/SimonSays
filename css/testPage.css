@@ -14,7 +14,7 @@
 #green {
   height: 100px;
   width: 100px;
-  background-color: green;
+  /* background-color: green; */
   text-align: center;
   margin: 1rem;
 }
@@ -22,7 +22,7 @@
 #red {
   height: 100px;
   width: 100px;
-  background-color: red;
+  /* background-color: red; */
   text-align: center;
   margin: 1rem;
 }
@@ -30,7 +30,7 @@
 #yellow {
   height: 100px;
   width: 100px;
-  background-color: yellow;
+  /* background-color: yellow; */
   text-align: center;
   margin: 1rem;
 }
@@ -38,7 +38,7 @@
 #blue {
   height: 100px;
   width: 100px;
-  background-color: blue;
+  /* background-color: blue; */
   text-align: center;
   margin: 1rem;
   
