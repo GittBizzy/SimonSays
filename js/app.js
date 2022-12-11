@@ -137,6 +137,7 @@ function easyPush() {
     gamePlay.push(placeHolder);
   }
 }
+easyPush();
 
 // Base Colors function
 function baseColor() {
