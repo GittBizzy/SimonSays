@@ -4,10 +4,10 @@
 let userScore = 0;
 let round = 0;
 let colorsArray = [];
-let gamePlay = [];
-let userPlay = [];
+let gamePlay = [];//computers array for game
+let userPlay = [];//players array for game
 let win = false;
-let on = false;
+let on = false; //on/off switch is for running sections of code
 let playable = true;
 
 const playButton = document.querySelector("#play");
@@ -42,6 +42,7 @@ redColor.style.backgroundColor = red.name;
 yellowColor.style.backgroundColor = yellow.name;
 blueColor.style.backgroundColor = blue.name;
 
+
 // Constructor to create color objects
 function Color(name) {
   this.name = name;
@@ -63,7 +64,7 @@ let hardMode = colorsArray;
 console.log(`Hard mode `, hardMode);
 
 // get random index for our color selector
-function getHardIndex() {
+function getRandomIndex() {
   return Math.floor(Math.random() * colorsArray.length);
 }
 
@@ -72,7 +73,7 @@ function getMediumIndex() {
 }
 
 function getEasyIndex() {
-  return Math.floor(Math.random() * colorsArray.length);
+  return Math.floor(Math.random() * 4);
 }
 
 // condition for game
@@ -86,7 +87,7 @@ playButton.addEventListener(`click`, handlePlayGame);
 
 // Event handler function to play the game
 function handlePlayGame(event) {
-  
+
   if (!win && playable) {
     playGame();
     // computerTurn();
@@ -98,32 +99,65 @@ function handlePlayGame(event) {
 //play game function
 function playGame() {
   win = false;
+  flash = 0;
   round = 1;
   gamePlay = [];
   userPlay = [];
+  easyPush();
+  gameTurn = true;
   // playable = true;
 
 
   while (!win && playable) {
-
-    for (let i = 0; i <= 10; i++) {
-      gamePlay.push(getRandomIndex())
+    for (let i = 0; i < 100; i++) {
+      computerTurn();
+      userTurn();
+      gameOver();//This will make playable false
     }
-    computerTurn();
-    userTurn();
   }
 }
 
-function computerTurn(){
-  if (computerTurn){
-    
-
-
-    setTimeout
+// This is for when the computer is running it's turn in the round
+function computerTurn() {
+  // if it's the computers turn. run this code
+  if (!on) {
+    if (flash == round) {
+      // clear interval
+      gameTurn = false;
+      clearColor();
+      on = true;
+    }
   }
+}
+
+// This pushes all our easy mode numbers into the gameplay array.
+function easyPush() {
+  while (gamePlay.length < 100) {
+    let placeHolder = getEasyIndex();
+    gamePlay.push(placeHolder);
+  }
+}
+
+// Base Colors function
+function baseColor() {
+  greenColor.style.backgroundColor = green.name;
+  redColor.style.backgroundColor = red.name;
+  yellowColor.style.backgroundColor = yellow.name;
+  blueColor.style.backgroundColor = blue.name;
 
 }
 
+// Color that the buttons will flash to when selected
+function flashColor(){
+  greenColor.style.backgroundColor = "lightgreen";
+  redColor.style.backgroundColor = "tomato";
+  yellowColor.style.backgroundColor = "yellowgreen";
+  blueColor.style.backgroundColor = "lightskyblue";
+}
+
+
+
+console.log(gamePlay);
 // for( let i = 0; i <40; i++){
 // console.log(getRandomIndex());
 // }
@@ -155,25 +189,19 @@ function computerTurn(){
 
 // console.log graveyard
 
-console.log()
+// Variable for difficulty then case switch for easy medium and hard
 
-function randomPush() {
 
-  while(gamePlay.length < 100) {
-  
-    let placeHolder = getRandomIndex();
-    // console.log(placeHolder);
-    gamePlay.push(placeHolder);
+// function randomPush() {
+//   while (gamePlay.length < 100) {
+//     let placeHolder = getRandomIndex();
+//     if (placeHolder < 4) {
+//       gamePlay.push(placeHolder);
+//     } else {
+//       randomPush();
+//     }
+//   }
+// }
 
-    if(placeHolder < 4) {
-      gamePlay.push(placeHolder);
-      // console.log(gamePlay);
-    } else {
-      randomPush();
-    }
-
-  }
-}
-
-randomPush();
-console.log(gamePlay);
+// randomPush();
+// console.log(gamePlay);
