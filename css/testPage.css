@@ -1,0 +1,53 @@
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.topBox {
+  display: flex;
+}
+
+.bottomBox {
+  display: flex;
+}
+
+#green {
+  height: 100px;
+  width: 100px;
+  /* background-color: green; */
+  text-align: center;
+  margin: 1rem;
+}
+
+#red {
+  height: 100px;
+  width: 100px;
+  /* background-color: red; */
+  text-align: center;
+  margin: 1rem;
+}
+
+#yellow {
+  height: 100px;
+  width: 100px;
+  /* background-color: yellow; */
+  text-align: center;
+  margin: 1rem;
+}
+
+#blue {
+  height: 100px;
+  width: 100px;
+  /* background-color: blue; */
+  text-align: center;
+  margin: 1rem;
+  
+}
+
+
+#blue:hover{
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+  transition: 1s;
+}
