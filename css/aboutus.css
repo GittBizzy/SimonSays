@@ -6,7 +6,6 @@
     box-sizing: content-box;
     height: 100vh;
     width: 100vh;
-    /* position: absolute; */
     margin:auto;
     padding: 5px;
     border: 5px;
@@ -23,11 +22,21 @@
     border: 5px solid rgb(128, 180, 245);
     margin: 15px;
     box-sizing: border-box;
-    overflow: scroll;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     font-size:small;
+  
   }
+
+  .nick .container .box:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+
+
   .nick .container .box .icon {
     position: absolute;
     top: 0;
@@ -38,7 +47,8 @@
     background: rgb(13, 153, 255);
     transition: 0.5s;
     z-index: 1;
-    overflow:scroll;
+
+    
   }
   .nick .container .box:hover .icon {
     top: 20px;
@@ -52,7 +62,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* font-family: "Courier New", monospace; */
     font-size: 80px;
     transition: 0.5s;
     color: rgb(255, 255, 255);
@@ -112,14 +121,20 @@
     height: calc(205px - 30px);
     background: black;
     border: 5px solid rgb(237, 149, 146);
-    /* float:left; */
     margin: 15px;
     box-sizing: border-box;
-    overflow: scroll;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     font-size:small;
   }
+  .paula .containerpd .boxpd:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+
   .paula .containerpd .boxpd .iconpd {
     position: absolute;
     top: 0;
@@ -130,7 +145,7 @@
     background: rgb(242, 72, 34);
     transition: 0.5s;
     z-index: 1;
-    overflow:scroll;
+    overflow:hidden;
   }
   .paula .containerpd .boxpd:hover .iconpd {
     top: 20px;
@@ -204,14 +219,21 @@
     height: calc(205px - 30px);
     background: black;
     border: 5px solid rgb(188, 152, 236);
-    /* float:left; */
     margin: 15px;
     box-sizing: border-box;
-    overflow: scroll;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     font-size:small;
   }
+  .anthony .containera .boxa:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+
+
   .anthony .containera .boxa .icona {
     position: absolute;
     top: 0;
@@ -222,7 +244,7 @@
     background: rgb(151, 71, 255);
     transition: 0.5s;
     z-index: 1;
-    overflow:scroll;
+    overflow:hidden;
   }
   .anthony .containera .boxa:hover .icona {
     top: 20px;
@@ -230,6 +252,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
+  
   }
   .anthony .containera .boxa .icona .picturea {
     position: absolute;
@@ -240,9 +263,11 @@
     font-size: 80px;
     transition: 0.5s;
     color: rgb(255, 255, 255);
+  
   }
   .anthony .containera .boxa:hover .icona .picturea {
     font-size: 60px;
+  
   }
   .anthony .containera .boxa .icona .picturea {
     position: absolute;
@@ -252,6 +277,7 @@
     font-size: 80px;
     transition: 0.5s;
     color: rgb(255, 255, 255);
+  
   }
   .anthony .containera .boxa:hover .icona .picturea {
     font-size: 60px;
@@ -269,22 +295,26 @@
   .anthony .containera .boxa:hover .contenta {
     top: 100px;
     opacity: 1;
+
   }
   .anthony .containera .boxa .contenta h3 {
     margin: 0 0 10px;
     padding: 0;
     color: #fff;
     font-size: 18px;
+    
   }
   .anthony .containera .boxa .contenta p {
     margin: 0;
     padding: 0;
     color: #fff;
+    
   }
   .anthony .containera .boxa .contenta .linka {
     margin: 0;
     padding: 0;
     color: #fff;
+    
   }
 
   .jennifer .containerj .boxj {
@@ -297,10 +327,17 @@
     border: 5px solid rgb(144, 254, 116);
     margin: 15px;
     box-sizing: border-box;
-    overflow: scroll;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     font-size:small;
+  }
+
+  .jennifer .containerj .boxj:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
   }
   .jennifer .containerj .boxj .iconj {
     position: absolute;
@@ -312,7 +349,7 @@
     background: rgb(20, 174, 92);
     transition: 0.5s;
     z-index: 1;
-    overflow:scroll;
+    /* overflow:scroll; */
   }
   .jennifer .containerj .boxj:hover .iconj {
     top: 20px;
@@ -387,11 +424,19 @@
     border: 5px solid rgb(244, 245, 145);
     margin: 15px;
     box-sizing: border-box;
-    overflow: scroll;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     font-size:small;
   }
+
+  .peter .containerp .boxp:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+
   .peter .containerp .boxp .iconp {
     position: absolute;
     top: 0;
@@ -402,7 +447,7 @@
     background: rgb(255, 205, 41);
     transition: 0.5s;
     z-index: 1;
-    overflow:scroll;
+    /* overflow:scroll; */
   }
   .peter .containerp .boxp:hover .iconp {
     top: 20px;
