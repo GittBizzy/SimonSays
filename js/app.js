@@ -14,6 +14,7 @@ let playable = true; // is good to play
 let sound = true; // boolean for color light up sound
 let intervalId = 0;
 
+const scoreBoard = document.getElementById('playerScore');
 const playButton = document.querySelector("#play");
 const onButton = document.querySelector('#onButton');
 const roundCounter = document.querySelector('#round');
@@ -121,6 +122,7 @@ function handlePowerButton (event) {
 //play game function
 function playGame() {
   win = false;
+  userScore = 0;
   flash = 0;
   round = 1;
   gamePlay = [];
@@ -295,19 +297,12 @@ function gameCheck () {
     playable = false;
   }
   
-  if (userPlay.length == 3 && playable) {
+  if (userPlay.length == 100 && playable) {
     winner();
   }
 
   if (!playable) {
     flashColor();
-    setTimeout(() => {
-      baseColor();
-      flashColor();
-      baseColor();
-      flashColor();
-      // if (hardMode) after MVP
-    }, 1600);
     // alert(`You LOSE! GOOD DAY!`);
     setTimeout(() => {
       baseColor();
@@ -330,6 +325,7 @@ function gameCheck () {
       userScore += 100;
     }
     console.log(`Player Score: ${userScore}`);
+    scoreBoard.innerHTML = userScore;
     userPlay = [];
     compTurn = true;
     flash = 0;
