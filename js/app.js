@@ -2,15 +2,21 @@
 
 // Global Variables
 let userScore = 0;
+let flash = 0;
 let round = 0;
 let colorsArray = [];
 let gamePlay = [];//computers array for game
 let userPlay = [];//players array for game
-let win = false;
+let compTurn = false; // boolean for computer's turn
+let win = false; // boolean for win/lose
 let on = false; //on/off switch is for running sections of code
-let playable = true;
+let playable = true; // is good to play
+let sound = true; // boolean for color light up sound
+let intervalId = 0;
 
 const playButton = document.querySelector("#play");
+const onButton = document.querySelector('#onButton');
+const roundCounter = document.querySelector('#round');
 
 const greenColor = document.getElementById('green');
 const redColor = document.getElementById('red');
@@ -24,13 +30,17 @@ const pinkColor = 0;
 const orangeColor = 0;
 
 
+// Easy Mode colors
+const red = new Color('darkred');
+const blue = new Color('darkblue');
+const yellow = new Color('goldenrod');
+const green = new Color('darkgreen');
 
-const red = new Color('red');
-const blue = new Color('blue');
-const yellow = new Color('yellow');
-const green = new Color('green');
+// Medium Mode colors
 const purple = new Color('purple');
 const white = new Color('white');
+
+// Hard Mode colors
 const orange = new Color('orange');
 const pink = new Color(`pink`);
 
@@ -53,15 +63,15 @@ function Color(name) {
 
 // Colors Array Easy
 let easyMode = [red, blue, yellow, green];
-console.log(`Easy mode`, easyMode);
+// console.log(`Easy mode`, easyMode);
 
 // Colors Array Medium
 let mediumMode = [red, blue, yellow, green, purple, orange];
-console.log(`Medium mode`, mediumMode);
+// console.log(`Medium mode`, mediumMode);
 
 // Colors Array Hard
 let hardMode = colorsArray;
-console.log(`Hard mode `, hardMode);
+// console.log(`Hard mode `, hardMode);
 
 // get random index for our color selector
 function getRandomIndex() {
@@ -88,10 +98,22 @@ playButton.addEventListener(`click`, handlePlayGame);
 // Event handler function to play the game
 function handlePlayGame(event) {
 
-  if (!win && playable) {
+  if (on && playable) {
+
+    // console.log(`I'm Alive!!!`);
     playGame();
-    // computerTurn();
-    // userTurn();
+  }
+}
+
+function handlePowerButton (event) {
+  if (onButton.checked == true) {
+    on = true
+    console.log('button pressed', on);
+  } else {
+    on = false
+    baseColor();
+    clearInterval(intervalId);
+    console.log('button unpressed', on);
   }
 }
 
@@ -103,32 +125,83 @@ function playGame() {
   round = 1;
   gamePlay = [];
   userPlay = [];
+  intervalId = 0;
+  playable = true;
   easyPush();
-  gameTurn = true;
-  // playable = true;
+  console.log(gamePlay);
+  compTurn = true;
 
-
-  while (!win && playable) {
-    for (let i = 0; i < 100; i++) {
-      computerTurn();
-      userTurn();
-      gameOver();//This will make playable false
-    }
-  }
+  // game intervals through each color generated in array during computers turn
+  intervalId = setInterval(computerTurn, 800);
 }
+
 
 // This is for when the computer is running it's turn in the round
 function computerTurn() {
+  on = false
   // if it's the computers turn. run this code
-  if (!on) {
-    if (flash == round) {
-      // clear interval
-      gameTurn = false;
-      clearColor();
-      on = true;
-    }
+  
+  // if statement that compares flash to round, if they match the clears the computer turn and switches to player turn
+  if (flash == round) {
+    clearInterval(intervalId);
+    compTurn = false;
+    baseColor();
+    on = true;
   }
+  
+  if (compTurn) {
+    baseColor();
+    setTimeout(() => {
+      if (gamePlay[flash] == 0) greenTile();
+      // console.log(flash);
+      if (gamePlay[flash] == 1) redTile();
+      // console.log(flash);
+      if (gamePlay[flash] == 2) yellowTile();
+      // console.log(flash);
+      if (gamePlay[flash] == 3) blueTile();
+      // console.log(flash);
+      flash++;
+    }, 200);
+  }
+  
 }
+
+function greenTile() {
+  if (sound) {
+    let audio = document.getElementById('sound1');
+    // audio.play();
+  }
+  sound = true;
+  greenColor.style.backgroundColor = 'lightgreen';
+}
+
+function redTile() {
+  if (sound) {
+    let audio = document.getElementById('sound2');
+    // audio.play();
+  }
+  sound = true;
+  redColor.style.backgroundColor = 'tomato';
+}
+
+function yellowTile() {
+  if (sound) {
+    let audio = document.getElementById('sound3');
+    // audio.play();
+  }
+  sound = true;
+  yellowColor.style.backgroundColor = 'yellow';
+}
+
+function blueTile() {
+  if (sound) {
+    let audio = document.getElementById('sound3');
+    // audio.play();
+  }
+  sound = true;
+  blueColor.style.backgroundColor = 'lightblue';
+}
+
 
 // This pushes all our easy mode numbers into the gameplay array.
 function easyPush() {
@@ -137,7 +210,8 @@ function easyPush() {
     gamePlay.push(placeHolder);
   }
 }
-easyPush();
+// easyPush();
+// console.log(gamePlay);
 
 // Base Colors function
 function baseColor() {
@@ -148,7 +222,7 @@ function baseColor() {
 
 }
 
-// Color that the buttons will flash to when selected
+// Color that the buttons will flash to when player selects wrong color in sequence
 function flashColor(){
   greenColor.style.backgroundColor = "lightgreen";
   redColor.style.backgroundColor = "tomato";
@@ -156,9 +230,120 @@ function flashColor(){
   blueColor.style.backgroundColor = "lightskyblue";
 }
 
+// event handler to track color selected by the player
 
+function handleGreenSelected(event) {
+  if (on) {
+    userPlay.push(0);
+    gameCheck();
+    greenTile();
+    if (!win) {
+      setTimeout(() => {
+        baseColor();
+      }, 300);
+    }
+  }
 
-console.log(gamePlay);
+}
+
+function handleRedSelected(event) {
+  if (on) {
+    userPlay.push(1);
+    gameCheck();
+    redTile();
+    if (!win) {
+      setTimeout(() => {
+        baseColor();
+      }, 300);
+    }
+  }
+
+}
+
+function handleYellowSelected(event) {
+  if (on) {
+    userPlay.push(2);
+    gameCheck();
+    yellowTile();
+    if (!win) {
+      setTimeout(() => {
+        baseColor();
+      }, 300);
+    }
+  }
+
+}
+
+function handleBlueSelected(event) {
+  if (on) {
+    userPlay.push(3);
+    gameCheck();
+    blueTile();
+    if (!win) {
+      setTimeout(() => {
+        baseColor();
+      }, 300);
+    }
+  }
+
+}
+
+// function for game to check and compare gamePlay array vs userPlay array
+
+function gameCheck () {
+  if (userPlay[userPlay.length - 1] !== gamePlay[userPlay.length - 1]) {
+    playable = false;
+  }
+  
+  if (userPlay.length == 3 && playable) {
+    winner();
+  }
+
+  if (!playable) {
+    flashColor();
+    setTimeout(() => {
+      baseColor();
+      flashColor();
+      baseColor();
+      flashColor();
+      // if (hardMode) after MVP
+    }, 1600);
+    // alert(`You LOSE! GOOD DAY!`);
+    setTimeout(() => {
+      baseColor();
+      playGame();
+      // if (hardMode) after MVP
+    }, 800);
+
+    sound = false;
+  }
+
+  if (round == userPlay.length && playable && !win) {
+    round++;
+    if (round <= 5) {
+      userScore += 10;
+    } else if (round > 5 && round <= 10) {
+      userScore += 30;
+    } else if (round > 10 && round <= 20) {
+      userScore += 50;
+    } else {
+      userScore += 100;
+    }
+    console.log(`Player Score: ${userScore}`);
+    userPlay = [];
+    compTurn = true;
+    flash = 0;
+    intervalId = setInterval(computerTurn, 800);
+  }
+}
+
+function winner() {
+  flashColor();
+  alert(`Congratulations! You WON!`);
+  playable = false;
+  win = true;
+}
+
 // for( let i = 0; i <40; i++){
 // console.log(getRandomIndex());
 // }
@@ -206,3 +391,13 @@ console.log(gamePlay);
 
 // randomPush();
 // console.log(gamePlay);
+
+
+//event listener for play button
+
+playButton.addEventListener('click', handlePlayGame);
+onButton.addEventListener('change', handlePowerButton);
+greenColor.addEventListener('click', handleGreenSelected);
+redColor.addEventListener('click', handleRedSelected);
+yellowColor.addEventListener('click', handleYellowSelected);
+blueColor.addEventListener('click', handleBlueSelected);
