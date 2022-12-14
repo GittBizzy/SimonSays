@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- <link rel=“stylesheet” href="css/leaderboard_01.css"> -->
-  <link rel="stylesheet" href="/css/leaderboard_01.css">
-  <title>Simon Says Leaderboard</title>
+  <title>Simon Says</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/leaderboard_01.css">
+  <link rel="icon" href="img/favicon_io/favicon.ico" />
 </head>
 
 <body>
@@ -32,42 +32,44 @@
   </header>
 
   <main>
-
-    <div id="bigContainer"> Big Bertha
-  
-      <div id="container1">
-        Berth child 1
-        <div id= "containerChild">Easy
-          <p>one</p>
-          <p>two</p>
-          <p>three</p>
-          <p>four</p>
-        </div>
     
-        <div id="containerChild">Medium
+    <div id="bigContainer">
+      <h1>Leaderboard</h1>
+
+      <div id="container1">
+        <h2>Easy</h2>
+        <div id="containerEasyChild">
+          <table id="easyTable">
+
+          </table>
+        </div>
+
+        <!-- <div id="containerMediumChild">
+          <h2>Medium</h2>
           <p>one</p>
           <p>two</p>
           <p>three</p>
           <p>four</p>
         </div>
 
-        <div id="containerChild">Hard
+        <div id="containerHardChild">
+          <h2>Hard</h2>
           <p>one</p>
           <p>two</p>
           <p>three</p>
           <p>four</p>
+        </div> -->
+      </div>
+
+      <div id="scoreChart">
+        <h2>All Scores</h2>
+        <div>
+          <canvas id="myChart"></canvas>
         </div>
+
       </div>
 
-      <div id="Container2">
-        bertha child 2
-        <h2> Chart </h2>
-        <div id="chart"></div>
-      </div>
-      
-    </div>
-
-    <!-- <table id=“easy_scores”>
+      <!-- <table id=“easy_scores”>
       <thead>
         <tr id=“easy_scores_row”>
         </tr>
@@ -117,7 +119,9 @@
 
   </footer>
 
-  <script src=“js/app.js”></script>
+  <script src="js/lapp.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>

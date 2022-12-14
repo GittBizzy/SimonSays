@@ -397,3 +397,16 @@ greenColor.addEventListener('click', handleGreenSelected);
 redColor.addEventListener('click', handleRedSelected);
 yellowColor.addEventListener('click', handleYellowSelected);
 blueColor.addEventListener('click', handleBlueSelected);
+
+// Leaderboard table
+let playerNameAndHighScore = [];
+
+function Player (name, score) {
+  this.name = name;
+  this.score = score;
+  playerNameAndHighScore.push(this);
+}
+
+let playerOne = new Player ('Anthony', 999);
+
+console.log(playerNameAndHighScore);
