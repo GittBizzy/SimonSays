@@ -32,44 +32,53 @@
     </nav>
   </header>
   <main>
-    <div>
-      <div>
-        <button> Music Icon</button>
+    <div class="content">
+      <div class="top-content">
+        <!-- <button> Music Icon</button> -->
+        <div class="audio">
+          <audio controls id="sound-button">
+            <sound src="sound.mp3" type="audio.mpeg" />
+          </audio>
+        </div>
+        <div class="tutorial">
+            <h4>Tutorial</h4>
+            <p>Hello and welcome to Simon Says, a fun and interactive memory game! 
+               Simon Says is a circular gameboard with four buttons on top. 
+               Each button lights up and plays a sound when pressed.
+               Try and follow the pattern demonstrated at the beginning of each round.
+               Simon Says will speed up as the game progresses so it becomes more difficult to win. 
+               Play with up to 2 players. </p>
+        </div>
+        </div>
+        
       </div>
-      <div>
+      <div class="theme">
         <ul>
-          <li> <button> Beach </button>
+          <li> <button>themes</button></li>
+          <li> <button class="eighties"> <input type="image" name="eighties" src="../SimonSays/img/80s.png" height="100" width="">  </button>
           </li>
-          <li> <button>70's icon/theme </button>
+          <li> <button id="seventies"> </button>
           </li>
-          <li> <button> Winter </button>
+          <li> <button id="winter"> Winter </button>
           </li>
-          <li> <button> Dark Mode </button> </li>
+          <li> <button id="dark-mode"> Dark Mode </button> </li>
         </ul>
       </div>
-      <audio controls>
-        <sound src="sound.mp3" type="audio.mpeg" />
-      </audio>
-      <button>themes</button>
-      <p>icons</p>
-      <div class="rectangle">
-
-        <h4>Tutorial</h4>
-
-        <p>Hello and welcome to Simon Says, a fun and interactive memory game!
-          Simon Says is a circular gameboard with four buttons on top.
-          Each button lights up and plays a sound when pressed.
-          Try and follow the pattern demonstrated at the beginning of each round.
-          Simon Says will speed up as the game progresses so it becomes more difficult to win.
-          Play with up to 2 players. </p>
-
-        </section=>
+    <div class="gameBoard">
+      <div class="colors">
+        <div class="topBox">
+          <div id="green"></div>
+          <div id="red"></div>
+        </div>
+        <div class="bottomBox">
+          <div id="yellow"></div>
+          <div id="blue"></div>
+        </div>
+        <div class="innerCircle">
+          <button class="buttonPlay"><i class="fa-solid fa-play"></i> Play</button>
+        </div>
 
       </div>
-    </div>
-    <div>
-      <p>Game Board</p>
-      <button class="buttonPlay"><i class="fa-solid fa-play"></i> Play</button>
     </div>
   </main>
   <footer>
