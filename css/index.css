@@ -1,24 +1,93 @@
 body {
-    background-color: aqua;
-}
-.buttonPlay {
-    background-color: #4CAF50; /*Green */
-    border: none;
-    color: black;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 50%;
+  background-color: rgb(137, 137, 137);
+  background-image: url("../img/background.jpg");
+  background-size: 100%;
+  height: 1vw;
 }
 
+header {
+  box-shadow: 1px 10px 16px 0px rgba(122, 122, 122, 0.75);
+
+  border-radius: 20px;
+}
+
+.buttonPlay {
+  background-color: #4caf50; /*Green */
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.theme {
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-content {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#sound-button {
+  box-shadow: 10px 10px 5px 0px rgba(122, 122, 122, 0.75);
+  border-radius: 20px;
+}
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 1rem;
+  overflow: hidden;
+  background-color: #333;
+  justify-items: center;
+  text-align: center;
+  max-width: 20rem;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 10px 10px 5px 0px rgba(122, 122, 122, 0.75);
+}
+
+.theme ul{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    float: right;
+    position: relative;
+    box-shadow: 5px 5px 5px 0px rgba(122, 122, 122, 0.75);
+}
+
+
+.theme ul li{
+    display: flex;
+    height: fit-content;
+    padding: 5px;
+}
 
 img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+footer{
+position: absolute;
+bottom: 0;
+width: 100%;
+height: fit-content;
+font-size: 14px;
 }
