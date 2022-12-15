@@ -198,7 +198,7 @@ function yellowTile() {
 
 function blueTile() {
   if (sound) {
-    let audio = document.getElementById('sound3');
+    let audio = document.getElementById('sound4');
     // audio.play();
   }
   sound = true;
@@ -304,13 +304,15 @@ function gameCheck () {
 
   if (!playable) {
     flashColor();
+    if(!win) {
+      alert('GAME OVER');
+      askPlayerName();
+    }
     setTimeout(() => {
       baseColor();
       playGame();
       // if (hardMode) after MVP
-    }, 800);
-    playerName = prompt(`GAME OVER! Please enter your name!`);
-    
+    }, 500);
     sound = false;
   }
 
@@ -336,7 +338,8 @@ function gameCheck () {
 
 function winner() {
   flashColor();
-  playerName = prompt(`WINNER! Please enter your name!`);
+  alert('WINNER!')
+  askPlayerName();
   playable = false;
   win = true;
 }
@@ -402,15 +405,15 @@ redColor.addEventListener('click', handleRedSelected);
 yellowColor.addEventListener('click', handleYellowSelected);
 blueColor.addEventListener('click', handleBlueSelected);
 
-// Leaderboard table
-let playerNameAndHighScore = [];
+// // Leaderboard table
+// let playerNameAndHighScore = [];
 
-function Player (name, score) {
-  this.name = name;
-  this.score = score;
-  playerNameAndHighScore.push(this);
-}
+// function Player (name, score) {
+//   this.name = name;
+//   this.score = score;
+//   playerNameAndHighScore.push(this);
+// }
 
-let playerOne = new Player ('Anthony', 999);
+// let playerOne = new Player ('Anthony', 999);
 
-console.log(playerNameAndHighScore);
+// console.log(playerNameAndHighScore);
