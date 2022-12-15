@@ -519,6 +519,7 @@
   img {
     border-radius: 30%;
     border: 3px solid #333;
+   
   }
 
   body{
@@ -526,7 +527,7 @@
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    background: url('./palmretro.jpg'); /* url('./pexels-roberto-nickson-2559941.jpg'); */
+    background: url('../img/palmretro.jpg');
     background-position: center;
     background-size: cover;
 }
