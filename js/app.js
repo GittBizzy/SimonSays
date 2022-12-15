@@ -13,6 +13,7 @@ let on = false; //on/off switch is for running sections of code
 let playable = true; // is good to play
 let sound = true; // boolean for color light up sound
 let intervalId = 0;
+let powerOn = false;
 
 const scoreBoard = document.getElementById('playerScore');
 const playButton = document.querySelector("#play");
@@ -98,18 +99,20 @@ playButton.addEventListener(`click`, handlePlayGame);
 
 // Event handler function to play the game
 function handlePlayGame(event) {
-
   if (on && playable) {
-
     // console.log(`I'm Alive!!!`);
     playGame();
   }
 }
 
+
+console.log(powerOn);
 function handlePowerButton (event) {
-  if (onButton.checked == true) {
+  powerOn = !powerOn;
+  if (powerOn) {
     on = true
     console.log('button pressed', on);
+    powerOn.classList.toggle("on")
   } else {
     on = false
     baseColor();
@@ -117,6 +120,7 @@ function handlePowerButton (event) {
     console.log('button unpressed', on);
   }
 }
+
 
 
 //play game function
@@ -392,7 +396,8 @@ function winner() {
 //event listener for play button
 
 playButton.addEventListener('click', handlePlayGame);
-onButton.addEventListener('change', handlePowerButton);
+// changed this
+onButton.addEventListener('click', handlePowerButton);
 greenColor.addEventListener('click', handleGreenSelected);
 redColor.addEventListener('click', handleRedSelected);
 yellowColor.addEventListener('click', handleYellowSelected);
