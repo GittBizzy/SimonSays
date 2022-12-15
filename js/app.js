@@ -1,6 +1,7 @@
 'use strict'
 
 // Global Variables
+let playerName = '';
 let userScore = 0;
 let flash = 0;
 let round = 0;
@@ -303,13 +304,13 @@ function gameCheck () {
 
   if (!playable) {
     flashColor();
-    // alert(`You LOSE! GOOD DAY!`);
     setTimeout(() => {
       baseColor();
       playGame();
       // if (hardMode) after MVP
     }, 800);
-
+    playerName = prompt(`GAME OVER! Please enter your name!`);
+    
     sound = false;
   }
 
@@ -335,10 +336,13 @@ function gameCheck () {
 
 function winner() {
   flashColor();
-  alert(`Congratulations! You WON!`);
+  playerName = prompt(`WINNER! Please enter your name!`);
   playable = false;
   win = true;
 }
+
+console.log('Player:', playerName);
+console.log('Player Score', userScore);
 
 // for( let i = 0; i <40; i++){
 // console.log(getRandomIndex());

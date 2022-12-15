@@ -11,6 +11,8 @@ function Player (name, score) {
   playerNameAndHighScore.push(this);
 }
 
+
+
 let playerOne = new Player ('Anthony', 999);
 let playerTwo = new Player ('Nick', 998);
 let playerThree = new Player ('Paula', 997);
@@ -49,15 +51,32 @@ testArray();
 
 console.log(renderPlayerScore);
 
-const ctx = document.getElementById('myChart');
+function testChart() {
 
+  // creating empty arrays for names, views and clicks
+  let names = [];
+  let scores = [];
+
+
+  
+  // for loop to iterate through each item in the productsArr array, each iteration pushes the current indices name, views, and clicks into their corresponding array.
+  for (let i = 0; i < playerNameAndHighScore.length; i++) {
+    names.push(playerNameAndHighScore[i].name);
+    scores.push(playerNameAndHighScore[i].score);
+  
+  }
+  
+  // Chart sourced from "https://www.chartjs.org/docs/latest/getting-started/"
+  // This chart will render the results of each images views and clicks in a bar graph
+  const ctx = document.getElementById('myChart');
+  
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: names,
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Scores',
+        data: scores,
         borderWidth: 1
       }]
     },
@@ -69,3 +88,12 @@ const ctx = document.getElementById('myChart');
       }
     }
   });
+}
+
+testChart();
+
+
+// Chart sourced from "https://www.chartjs.org/docs/latest/getting-started/"
+// This chart will render the results of each images views and clicks in a bar graph
+
+
