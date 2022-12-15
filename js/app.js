@@ -105,8 +105,6 @@ function handlePlayGame(event) {
   }
 }
 
-
-console.log(powerOn);
 function handlePowerButton (event) {
   powerOn = !powerOn;
   if (powerOn) {
@@ -120,8 +118,6 @@ function handlePowerButton (event) {
     console.log('button unpressed', on);
   }
 }
-
-
 
 //play game function
 function playGame() {
