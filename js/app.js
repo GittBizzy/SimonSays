@@ -110,7 +110,7 @@ function handlePowerButton (event) {
   if (powerOn) {
     on = true
     console.log('button pressed', on);
-    powerOn.classList.toggle("on")
+    powerOn.classList("on")
   } else {
     on = false
     baseColor();

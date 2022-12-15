@@ -21,6 +21,7 @@ header {
   justify-content: space-between;
   padding: 1rem;
 }
+
 #sound-button {
   box-shadow: 10px 10px 5px 0px rgba(122, 122, 122, 0.75);
   border-radius: 20px;
