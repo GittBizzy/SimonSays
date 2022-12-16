@@ -4,12 +4,11 @@
     /* background-repeat: no-repeat; */
     /* background-size: 100%;
     viewport-fit: 1vw;
-} */ */
+} */ 
 
 h1 {
     font-size: 75px;
     font-weight: bold;
-    font-family: "Courier New", monospace;
 }
 
 #container1 {
