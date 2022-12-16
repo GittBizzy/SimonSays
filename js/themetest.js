@@ -14,17 +14,17 @@ let mybackground = +localStorage.getItem('background')
 
 function background1() {
     localStorage.setItem('background', 1);
-    document.querySelector('body').style.backgroundImage = "url('../img/background.jpg')"; 
+    document.querySelector('body').style.backgroundImage = "url('img/background.jpg')"; 
     console.log("background1");
 }
 
 function background2() {
     localStorage.setItem('background', 2);
-    document.querySelector('body').style.backgroundImage = "url('../img/agamebackground.jpg')";
+    document.querySelector('body').style.backgroundImage = "url('img/agamebackground.jpg')";
     console.log("background2");
 }
 function background3() {
     localStorage.setItem('background', 3);
-    document.querySelector('body').style.backgroundImage = "url('../img/bgamebackground.jpg')";
+    document.querySelector('body').style.backgroundImage = "url('img/bgamebackground.jpg')";
     console.log("background3");
 }
