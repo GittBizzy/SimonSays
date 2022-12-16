@@ -96,23 +96,24 @@ function scoreChart() {
 scoreChart();
 
 function askPlayerName () {
-  let promptNameTest = prompt('What is your name?');
-  // while (promptNameTest = null) {
+  let promptName = prompt('What is your name?');
+  // while (promptName = null) {
 
   // }
-  if (promptNameTest) {
-    console.log(promptNameTest);
+  if (promptName) {
+    console.log(promptName);
     // change score to userScore
-    let createNewPlayer = new Player(promptNameTest, userScore);
-    console.log(createNewPlayer);
-    console.log(playerNameAndHighScore);
+    let createNewPlayer = new Player(promptName, userScore);
+    playerNameAndHighScore.sort((a,b) => b.score - a.score);
+    // console.log(createNewPlayer);
+    // console.log(playerNameAndHighScore);
     
     let refreshTable = document.getElementById('easyTable')
     if (refreshTable) {
       refreshTable.innerHTML = '';
       renderPlayerScore();
     }
-      
+
     let savedPlayer = JSON.stringify(playerNameAndHighScore);
     localStorage.setItem('player', savedPlayer);
   } else {
