@@ -14,7 +14,7 @@ let mybackground = +localStorage.getItem('background')
 
 function background1() {
     localStorage.setItem('background', 1);
-    document.querySelector('body').style.backgroundImage = "url('../img/palmretro.jpg')"; 
+    document.querySelector('body').style.backgroundImage = "url('../img/background.jpg')"; 
     console.log("background1");
 }
 
