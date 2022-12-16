@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
 // Global Variables
-let playerName = '';
+// let playerName = '';
 let userScore = 0;
 let flash = 0;
 let round = 0;
@@ -172,7 +172,7 @@ function computerTurn() {
 function greenTile() {
   if (sound) {
     let audio = document.getElementById('sound1');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   greenColor.style.backgroundColor = 'lightgreen';
@@ -181,7 +181,7 @@ function greenTile() {
 function redTile() {
   if (sound) {
     let audio = document.getElementById('sound2');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   redColor.style.backgroundColor = 'tomato';
@@ -190,7 +190,7 @@ function redTile() {
 function yellowTile() {
   if (sound) {
     let audio = document.getElementById('sound3');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   yellowColor.style.backgroundColor = 'yellow';
@@ -199,7 +199,7 @@ function yellowTile() {
 function blueTile() {
   if (sound) {
     let audio = document.getElementById('sound4');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   blueColor.style.backgroundColor = 'lightblue';
@@ -344,8 +344,6 @@ function winner() {
   win = true;
 }
 
-console.log('Player:', playerName);
-console.log('Player Score', userScore);
 
 // for( let i = 0; i <40; i++){
 // console.log(getRandomIndex());
