@@ -18,7 +18,7 @@ let powerOn = false;
 
 const scoreBoard = document.getElementById('playerScore');
 const playButton = document.querySelector("#play");
-const onButton = document.querySelector('#onButton');
+const onButton = document.querySelector('.onButton');
 const roundCounter = document.querySelector('#round');
 
 const greenColor = document.getElementById('green');
@@ -111,7 +111,7 @@ function handlePowerButton (event) {
   if (powerOn) {
     on = true
     console.log('button pressed', on);
-    powerOn.classList("on")
+
   } else {
     on = false
     baseColor();
@@ -141,6 +141,8 @@ function playGame() {
 
 // This is for when the computer is running it's turn in the round
 function computerTurn() {
+  // Prevents the player from clicking on the computers turn
+  playable = false;
   on = false
   // if it's the computers turn. run this code
   
@@ -149,6 +151,8 @@ function computerTurn() {
     clearInterval(intervalId);
     compTurn = false;
     baseColor();
+    //Re-enables the player to click
+    playable = true;
     on = true;
   }
   
@@ -403,6 +407,12 @@ greenColor.addEventListener('click', handleGreenSelected);
 redColor.addEventListener('click', handleRedSelected);
 yellowColor.addEventListener('click', handleYellowSelected);
 blueColor.addEventListener('click', handleBlueSelected);
+
+
+const handlePowerOn = () =>{
+  onButton.classList.toggle('active');
+}
+onButton.addEventListener('click', handlePowerOn);
 
 // // Leaderboard table
 // let playerNameAndHighScore = [];
