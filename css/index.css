@@ -11,25 +11,6 @@ header {
   border-radius: 20px;
 }
 
-.buttonPlay {
-  background-color: #4caf50; /*Green */
-  border: none;
-  color: black;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 50%;
-  position: absolute;
-  top: 35%;
-  left: 30%;
-}
-
-
-
 .content {
   display: flex;
   flex-direction: column;
@@ -41,6 +22,7 @@ header {
   justify-content: space-between;
   padding: 1rem;
 }
+
 #sound-button {
   box-shadow: 10px 10px 5px 0px rgba(122, 122, 122, 0.75);
   border-radius: 20px;
@@ -99,7 +81,6 @@ footer {
 
 /* Game Board Styling */
 
-
 .colors {
   border-radius: 50%;
   height: 520px;
@@ -107,15 +88,17 @@ footer {
   background-color: #000000;
   position: relative;
   border: 10px solid;
-  margin:auto;
+  margin: auto;
   margin-top: 2rem;
   box-shadow: 8px 8px 15px 5px #888888;
   display: flex;
   flex-direction: column;
+  top: -2rem;
+  left: 3rem;
 }
 
-.innerCircle{
-  position:absolute;
+.innerCircle {
+  position: absolute;
   background: rgb(0, 0, 0);
   border-radius: 50%;
   height: 250px;
@@ -125,12 +108,141 @@ footer {
   left: 25%;
 }
 
-.topBox{
-    display: flex;
+.topBox {
+  display: flex;
 }
 
-.bottomBox{
-    display: flex;
+.bottomBox {
+  display: flex;
+}
+
+/* Buttons */
+#play {
+  background-color:darkgreen;
+  box-shadow: 0px 3px 0px 0px rgb(34, 34, 34), 0px 7px 10px 0px rgb(17, 17, 17),
+  inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+  inset 0px -12px 35px 0px rgba(0, 0, 0, 0.5);
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 35%;
+  left: 31%;
+}
+
+#onButton {
+  position: absolute;
+  top: 15%;
+  left: 37%;
+  height: 20px;
+  width: 60px;
+  border-radius: 20px;
+  scale: 1.5;
+  box-shadow: 0px 3px 0px 0px rgb(34, 34, 34), 0px 7px 10px 0px rgb(17, 17, 17),
+    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+    inset 0px -12px 35px 0px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  text-align: center;
+  color: rgb(37, 37, 37);
+  text-shadow: 0px 1px 1px rgba(250, 250, 250, 0.1);
+  background-color: rgb(83, 87, 93);
+  transition: 0.5s;
+}
+/* #onButton::before {
+  content: "";
+  height: 20px;
+  width: 60px;
+  border-radius: 20px;
+  z-index: -2;
+  box-shadow: 0px 1px 0px 0px rgba(250, 250, 250, 0.1),
+    inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+} */
+
+#onButton:active {
+  box-shadow: 0px 0px 0px 0px rgb(34, 34, 34), 0px 3px 7px 0px rgb(17, 17, 17),
+    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+    inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgb(83, 87, 93);
+  color: #07ff10;
+}
+
+/* #onButton::after {
+  box-shadow: 0px 0px 0px 0px rgb(34, 34, 34), 0px 3px 7px 0px rgb(17, 17, 17),
+    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+    inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgb(83, 87, 93);
+  color: #07ff10;
+} */
+
+.on {
+  box-shadow: 0px 0px 0px 0px rgb(34, 34, 34), 0px 3px 7px 0px rgb(17, 17, 17),
+    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+    inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgb(83, 87, 93);
+  color: #07ff10;
+}
+
+#onButton:target {
+  box-shadow: 0px 0px 0px 0px rgb(34, 34, 34), 0px 3px 7px 0px rgb(17, 17, 17),
+    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+    inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgb(83, 87, 93);
+  color: rgb(23, 194, 51);
+  text-shadow: 0px 0px 3px rgb(250, 250, 250);
+}
+
+
+/* Score Box */
+#score{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  top: 75%;
+  left: 30%;
+  /* border: 1px solid red; */
+  background-color: rgb(83, 87, 93);
+  box-shadow: 0px 3px 0px 0px rgb(34, 34, 34), 0px 7px 10px 0px rgb(17, 17, 17),
+  inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+  inset 0px -12px 35px 0px rgba(0, 0, 0, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+  color: #fd4040;
+  font-size: 28px;
+  font-weight:bold;
+  border-radius: 10px;
+}
+
+#score span{
+ color: #fd4040;
+ text-shadow:
+ 0 0 7px rgb(245, 149, 149),
+ 0 0 10px rgb(245, 149, 149),
+ 0 0 21px rgb(245, 149, 149),
+ 0 0 42px rgb(255, 0, 0),
+ 0 0 82px rgb(255, 0, 0),
+ 0 0 92px rgb(255, 0, 0),
+ 0 0 102px rgb(255, 0, 0),
+ 0 0 151px rgb(255, 0, 0);
+
+}
+
+.innerCircle p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+  position: absolute;
+  top: 65%;
+  left: 39%;
 }
 
 #green {
@@ -142,39 +254,43 @@ footer {
 
 #green:hover {
   box-shadow: 0px 0px 25px 2px #07ff10;
+  cursor: pointer;
 }
 
 #red {
-    height: 250px;
-    width: 250px;
-    border-radius: 0 250px 0 0;
-    border: 5px solid black;
-  }
-  
-  #red:hover {
-    box-shadow: 0px 0px 25px 2px #fd4040;
-  }
-  #yellow {
-    height: 250px;
-    width: 250px;
-    border-radius: 0 0 0 250px;
-    border: 5px solid black;
-  }
-  
-  #yellow:hover {
-    box-shadow: 0px 0px 25px 2px #f3ff08;
-  }
+  height: 250px;
+  width: 250px;
+  border-radius: 0 250px 0 0;
+  border: 5px solid black;
+}
 
-  #blue {
-    height: 250px;
-    width: 250px;
-    border-radius: 0 0 250px 0;
-    border: 5px solid black;
-  }
-  
-  #blue:hover {
-    box-shadow: 0px 0px 25px 2px #07b9ff;
-  }
+#red:hover {
+  box-shadow: 0px 0px 25px 2px #fd4040;
+  cursor: pointer;
+}
+#yellow {
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 0 250px;
+  border: 5px solid black;
+}
+
+#yellow:hover {
+  box-shadow: 0px 0px 25px 2px #f3ff08;
+  cursor: pointer;
+}
+
+#blue {
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 250px 0;
+  border: 5px solid black;
+}
+
+#blue:hover {
+  box-shadow: 0px 0px 25px 2px #07b9ff;
+  cursor: pointer;
+}
 
   body{
     min-height: 100vh;
@@ -212,3 +328,4 @@ footer {
     border-radius: 30%;
     border: 3px solid #333;
   }
+
