@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simon Says</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="icon" href="img/favicon_io/favicon.ico" />
-    <script
-      src="https://kit.fontawesome.com/c0ce5dfa8b.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <header>
-      <title>About Us</title>
-      <nav>
-        <img src="" alt="" />
-        <ul>
-          <li id="home">
-            <h2><a href="/Index.html">Home</a></h2>
-          </li>
-          <li id="leaderboard">
-            <h2><a href="/leaderBoard.html">Leaderboard</a></h2>
-          </li>
-          <li id="aboutus">
-            <h2><a href="/aboutUs.html">About The Creators</a></h2>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Says</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <link rel="icon" href="img/favicon_io/favicon.ico" />
+
+  <script src="https://kit.fontawesome.com/c0ce5dfa8b.js" crossorigin="anonymous"> </script>
+
+  <audio id="clip1">
+  	<source src="/sounds/boxburpblurpbup__greencouch__.wav"> </source>
+  </audio>
+  <audio id="clip2">
+  	<source src="/sounds/boxoption__matrixxx__notification.wav"> </source>
+  </audio>
+  <audio id="clip3">
+  	<source src="sounds/softbox__matrixxx__.wav"> </source>
+  </audio>
+  <audio id="clip4">
+  	<source src="sounds/tresbox__eponn__.wav"></source>
+  </audio>
+  
+
+</head>
+
+<body>
+
+  <div class="back-grounds">
+    <div class="theme-change" onclick="background1()"><img src="img/palmretro.jpg" alt="retro palm tree"></div>
+    <div class="theme-change" onclick="background2()"><img src="img/agamebackground.jpg" alt="80"></div>
+    <div class="theme-change" onclick="background3()"><img src="img/bgamebackground.jpg" alt=" dark"></div>
+  </div>
+
+  <header>
+    <title>About Us</title>
+    <nav>
+      <img src="" alt="">
+      <ul>
+        <li id="home">
+          <h2><a href="/Index.html">Home</a></h2>
+        </li>
+        <li id="leaderboard">
+          <h2><a href="/leaderBoard.html">Leaderboard</a></h2>
+        </li>
+        <li id="aboutus">
+          <h2><a href="/aboutUs.html">About The Creators</a></h2>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+      <main>
       <div class="content">
         <div class="top-content">
           <!-- <button> Music Icon</button> -->
@@ -56,24 +80,10 @@
           </div>
         </div>
       </div>
-      <div class="theme">
-        <ul>
-          <li><button>themes</button></li>
-          <li>
-            <button class="eighties">
-              <input
-                type="image"
-                name="eighties"
-                src="./img/80s.png"
-                height="100"
-                width=""
-              />
-            </button>
-          </li>
-          <li><button id="seventies"></button></li>
-          <li><button id="winter">Winter</button></li>
-          <li><button id="dark-mode">Dark Mode</button></li>
-        </ul>
+
+    </div>
+    <!-- <div class="theme">
+
       </div>
       <div class="gameBoard">
         <div class="colors">
@@ -95,14 +105,23 @@
               <span id="playerScore"></span>
             </div>
           </div>
+
         </div>
       </div>
-    </main>
-    <footer>
-      <h3>
-        © Gitt Bizzy LLC 2022, A Code Fellows Project. All Rights Reversed.
-      </h3>
-    </footer>
+    </div>
+  </main>
+  <footer>
+
+    <h3> © Gitt Bizzy LLC 2022, A Code Fellows Project. All Rights Reversed.
+    </h3>
+
+  </footer>
+
+
+
+  <script src="js/app.js"></script>
+  <script src="js/themetest.js"></script>
+</body>
 
     <script src="js/app.js"></script>
   </body>

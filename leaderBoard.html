@@ -9,12 +9,24 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/leaderboard_01.css">
-  <link rel="icon" href="img/favicon_io/favicon.ico" />
+  <link rel="icon" href="img/favicon_io (1)/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu:wght@300&display=swap"
+    rel="stylesheet">
+  <style> @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu:wght@300&display=swap'); </style>
 </head>
 
 <body>
+
+  <div class="back-grounds">
+    <div class="theme-change" onclick="background1()"><img src="img/palmretro.jpg" alt=""></div>
+    <div class="theme-change" onclick="background2()"><img src="img/agamebackground.jpg" alt=""></div>
+    <div class="theme-change" onclick="background3()"><img src="img/bgamebackground.jpg" alt=""></div>
+</div>
+
+
   <header>
-    <title>About Us</title>
     <nav>
       <img src="" alt="">
       <ul>
@@ -32,7 +44,7 @@
   </header>
 
   <main>
-    
+
     <div id="bigContainer">
       <h1>Leaderboard</h1>
 
@@ -60,58 +72,16 @@
           <p>four</p>
         </div> -->
       </div>
-
-      <div id="scoreChart">
+      <div>
         <h2>All Scores</h2>
-        <div>
-          <canvas id="myChart"></canvas>
+        <div id="scoreChart">
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
         </div>
 
       </div>
-
-      <!-- <table id=“easy_scores”>
-      <thead>
-        <tr id=“easy_scores_row”>
-        </tr>
-      </thead>
-      <tbody id=“easy_scores_data”>
-      </tbody>
-      <tfoot id=“easy_scores_leaders”>
-      </tfoot>
-    </table>
-    <table id=“medium_scores”>
-      <thead>
-        <tr id=“medium_scores_row”>
-        </tr>
-      </thead>
-      <tbody id=“medium_scores_data”>
-      </tbody>
-      <tfoot id=“medium_scores_leaders”>
-      </tfoot>
-    </table>
-    <table id=“hard_scores”>
-      <thead>
-        <tr id=“hard_scores_row”>
-        </tr>
-      </thead>
-      <tbody id=“hard_scores_data”>
-      </tbody>
-      <tfoot id=“hard_scores_leaders”>
-      </tfoot>
-    </table>
-    <table id=“all_scores”>
-      <thead>
-        <tr id=“all_scores_row”>
-        </tr>
-      </thead>
-      <tbody id=“all_scores_data”>
-      </tbody>
-      <tfoot id=“all_scores_leaders”>
-      </tfoot>
-    </table> -->
-
   </main>
-
   <footer>
 
     <h3> © Gitt Bizzy LLC 2022, A Code Fellows Project. All Rights Reversed.
@@ -119,9 +89,10 @@
 
   </footer>
 
-  <script src="js/lapp.js"></script>
+  <script src="js/themetest.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/lapp.js"></script>
 </body>
 
 </html>
