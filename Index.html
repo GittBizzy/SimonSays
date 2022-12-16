@@ -10,10 +10,32 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="icon" href="img/favicon_io/favicon.ico" />
-  <script src="https://kit.fontawesome.com/c0ce5dfa8b.js" crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/c0ce5dfa8b.js" crossorigin="anonymous"> </script>
+
+  <audio id="clip1">
+  	<source src="/sounds/boxburpblurpbup__greencouch__.wav"> </source>
+  </audio>
+  <audio id="clip2">
+  	<source src="/sounds/boxoption__matrixxx__notification.wav"> </source>
+  </audio>
+  <audio id="clip3">
+  	<source src="sounds/softbox__matrixxx__.wav"> </source>
+  </audio>
+  <audio id="clip4">
+  	<source src="sounds/tresbox__eponn__.wav"></source>
+  </audio>
+  
 </head>
 
 <body>
+
+  <div class="back-grounds">
+    <div class="theme-change" onclick="background1()"><img src="img/palmretro.jpg" alt="retro palm tree"></div>
+    <div class="theme-change" onclick="background2()"><img src="img/agamebackground.jpg" alt="80"></div>
+    <div class="theme-change" onclick="background3()"><img src="img/bgamebackground.jpg" alt=" dark"></div>
+  </div>
+
   <header>
     <title>About Us</title>
     <nav>
@@ -37,7 +59,7 @@
         <!-- <button> Music Icon</button> -->
         <div class="audio">
           <audio controls id="sound-button">
-            <sound src="sound.mp3" type="audio.mpeg" />
+            <sound src="sounds/juicygrooveloop__mvrasseli__.wav" type="audio.mpeg" />
           </audio>
         </div>
         <div class="tutorial">
@@ -49,13 +71,13 @@
                Simon Says will speed up as the game progresses so it becomes more difficult to win. 
                Play with up to 2 players. </p>
         </div>
-        </div>
-        
       </div>
-      <div class="theme">
+
+    </div>
+    <!-- <div class="theme">
         <ul>
           <li> <button>themes</button></li>
-          <li> <button class="eighties"> <input type="image" name="eighties" src="../SimonSays/img/80s.png" height="100" width="">  </button>
+          <li> <button class="eighties"> <input type="image" name="eighties" src="img/80s.png" height="100" width="">  </button>
           </li>
           <li> <button id="seventies"> </button>
           </li>
@@ -63,7 +85,9 @@
           </li>
           <li> <button id="dark-mode"> Dark Mode </button> </li>
         </ul>
-      </div>
+      </div> -->
+
+
     <div class="gameBoard">
       <div class="colors">
         <div class="topBox">
@@ -75,7 +99,7 @@
           <div id="blue"></div>
         </div>
         <div class="innerCircle">
-          <button class="buttonPlay"><i class="fa-solid fa-play"></i> Play</button>
+          <button id="play" class="buttonPlay"><i class="fa-solid fa-play"></i> Play</button>
         </div>
 
       </div>
@@ -91,6 +115,7 @@
 
 
   <script src="js/app.js"></script>
+  <script src="js/themetest.js"></script>
 </body>
 
 </html>

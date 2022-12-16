@@ -1,13 +1,3 @@
-body {
-    font-family: "Courier New", monospace;
-    background-image: url("/img/agamebackground.jpg");
-    /* background-repeat: no-repeat; */
-    background-size: 100%;
-    width: auto;
-    height: auto;
-    
-}
-
 
 
 h1 {
@@ -135,4 +125,39 @@ h2 {
 
 footer {
     text-align: center;
+}
+
+body{
+    min-height: 100vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background: url('../img/palmretro.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.back-grounds{
+    width: 18rem;
+    height: 6rem;
+    background: white;
+    border-radius: 23px;
+    position: absolute;
+    top:120px;
+    left:80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.back-grounds .theme-change{
+    width: 91px;
+    height: 91px;
+    background: wheat;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 23px;
+}
+.back-grounds .theme-change img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
