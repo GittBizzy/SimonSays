@@ -1,0 +1,558 @@
+
+  
+  #backcircle {
+    background-color: rgb(8, 4, 4);
+    border-radius: 50%;
+    box-sizing: content-box;
+    height: 100vh;
+    width: 100vh;
+    margin:auto;
+    padding: 5px;
+    border: 5px;
+    left:25%;
+  }
+
+  .nick .container .box {
+    position: absolute;
+    left:41%;
+    top:17%;
+    width: calc(305px - 30px);
+    height: calc(205px - 30px);
+    background: black;
+    border: 5px solid rgb(128, 180, 245);
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    font-size:small;
+  
+  }
+
+  .nick .container .box:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+
+
+  .nick .container .box .icon {
+    position: absolute;
+    top: 0;
+    left: 20;
+    width: 100%;
+    height: 100%;
+    font-family: "Courier New", monospace;
+    background: rgb(13, 153, 255);
+    transition: 0.5s;
+    z-index: 1;
+
+    
+  }
+  .nick .container .box:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .nick .container .box .icon .picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  }
+  .nick .container .box:hover .icon .picture {
+    font-size: 60px;
+  }
+  .nick .container .box .icon .picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  }
+  .nick .container .box:hover .icon .picture {
+    font-size: 60px;
+  }
+  .nick .container .box .content {
+    position: absolute;
+    top: 100%;
+    height: calc(100%-100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nick .container .box:hover .content {
+    top: 100px;
+    opacity: 1;
+  }
+  .nick .container .box .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+  }
+  .nick .container .box .content p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .nick .container .box .content .link {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+
+
+  .paula .containerpd .boxpd {
+    position: absolute;
+    left:51%;
+    top:75%;
+    width: calc(305px - 30px);
+    height: calc(205px - 30px);
+    background: black;
+    border: 5px solid rgb(237, 149, 146);
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    font-size:small;
+  }
+  .paula .containerpd .boxpd:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+
+  .paula .containerpd .boxpd .iconpd {
+    position: absolute;
+    top: 0;
+    left: 20;
+    width: 100%;
+    height: 100%;
+    font-family: "Courier New", monospace;
+    background: rgb(242, 72, 34);
+    transition: 0.5s;
+    z-index: 1;
+    overflow:hidden;
+  }
+  .paula .containerpd .boxpd:hover .iconpd {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .paula .containerpd .boxpd .iconpd .picturepd {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-family: "Courier New", monospace; */
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  }
+  .paula .containerpd .boxpd:hover .iconpd .picturepd {
+    font-size: 60px;
+  }
+  .paula .containerpd .boxpd .iconpd .picturepd {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  }
+  .paula .containerpd .boxpd:hover .iconpd .picturepd {
+    font-size: 60px;
+  }
+  .paula .containerpd .boxpd .contentpd {
+    position: absolute;
+    top: 100%;
+    height: calc(100%-100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .paula .containerpd .boxpd:hover .contentpd {
+    top: 100px;
+    opacity: 1;
+  }
+  .paula .containerpd .boxpd .contentpd h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+  }
+  .paula .containerpd .boxpd .contentpd p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .paula .containerpd .boxpd .contentpd .linkpd {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+
+
+  .anthony .containera .boxa {
+    position: absolute;
+    left:58%;
+    top:47%;
+    width: calc(305px - 30px);
+    height: calc(205px - 30px);
+    background: black;
+    border: 5px solid rgb(188, 152, 236);
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    font-size:small;
+  }
+  .anthony .containera .boxa:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+
+
+  .anthony .containera .boxa .icona {
+    position: absolute;
+    top: 0;
+    left: 20;
+    width: 100%;
+    height: 100%;
+    font-family: "Courier New", monospace;
+    background: rgb(151, 71, 255);
+    transition: 0.5s;
+    z-index: 1;
+    overflow:hidden;
+  }
+  .anthony .containera .boxa:hover .icona {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  
+  }
+  .anthony .containera .boxa .icona .picturea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-family: "Courier New", monospace; */
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  
+  }
+  .anthony .containera .boxa:hover .icona .picturea {
+    font-size: 60px;
+  
+  }
+  .anthony .containera .boxa .icona .picturea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  
+  }
+  .anthony .containera .boxa:hover .icona .picturea {
+    font-size: 60px;
+  }
+  .anthony .containera .boxa .contenta {
+    position: absolute;
+    top: 100%;
+    height: calc(100%-100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .anthony .containera .boxa:hover .contenta {
+    top: 100px;
+    opacity: 1;
+
+  }
+  .anthony .containera .boxa .contenta h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+    
+  }
+  .anthony .containera .boxa .contenta p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    
+  }
+  .anthony .containera .boxa .contenta .linka {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    
+  }
+
+  .jennifer .containerj .boxj {
+    position: absolute;
+    left:24%;
+    top:47%;
+    width: calc(305px - 30px);
+    height: calc(205px - 30px);
+    background: black;
+    border: 5px solid rgb(144, 254, 116);
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    font-size:small;
+  }
+
+  .jennifer .containerj .boxj:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+  .jennifer .containerj .boxj .iconj {
+    position: absolute;
+    top: 0;
+    left: 20;
+    width: 100%;
+    height: 100%;
+    font-family: "Courier New", monospace;
+    background: rgb(20, 174, 92);
+    transition: 0.5s;
+    z-index: 1;
+    /* overflow:scroll; */
+  }
+  .jennifer .containerj .boxj:hover .iconj {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .jennifer .containerj .boxj .iconj .picturej {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-family: "Courier New", monospace; */
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  }
+  .jennifer .containerj .boxj:hover .iconj .picturej {
+    font-size: 60px;
+  }
+  .jennifer .containerj .boxj .iconj .picturej {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  }
+  .jennifer .containerj .boxj:hover .iconj .picturej {
+    font-size: 60px;
+  }
+  .jennifer .containerj .boxj .contentj {
+    position: absolute;
+    top: 100%;
+    height: calc(100%-100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .jennifer .containerj .boxj:hover .contentj {
+    top: 100px;
+    opacity: 1;
+  }
+  .jennifer .containerj .boxj .contentj h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+  }
+  .jennifer .containerj .boxj .contentj p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .jennifer .containerj .boxj .contentj .linkj {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+
+  .peter .containerp .boxp {
+    position: absolute;
+    left:32%;
+    top:75%;
+    width: calc(305px - 30px);
+    height: calc(205px - 30px);
+    background: black;
+    border: 5px solid rgb(244, 245, 145);
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    font-size:small;
+  }
+
+  .peter .containerp .boxp:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+
+  }
+
+  .peter .containerp .boxp .iconp {
+    position: absolute;
+    top: 0;
+    left: 20;
+    width: 100%;
+    height: 100%;
+    font-family: "Courier New", monospace;
+    background: rgb(255, 205, 41);
+    transition: 0.5s;
+    z-index: 1;
+    /* overflow:scroll; */
+  }
+  .peter .containerp .boxp:hover .iconp {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .peter .containerp .boxp .iconp .picturep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-family: "Courier New", monospace; */
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  }
+  .peter .containerp .boxp:hover .iconp .picturep {
+    font-size: 60px;
+  }
+  .peter .containerp .boxp .iconp .picturep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+  }
+  .peter .containerp .boxp:hover .iconp .picturep {
+    font-size: 60px;
+  }
+  .peter .containerp .boxp .contentp {
+    position: absolute;
+    top: 100%;
+    height: calc(100%-100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .peter .containerp .boxp:hover .contentp {
+    top: 100px;
+    opacity: 1;
+  }
+  .peter .containerp .boxp .contentp h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+  }
+  .peter .containerp .boxp .contentp p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .peter .containerp .boxp .contentp .linkp {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+
+
+  
+
+
+  img {
+    border-radius: 30%;
+    border: 3px solid #333;
+  }
+
+  body{
+    min-height: 100vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background: url('./palmretro.jpg'); /* url('./pexels-roberto-nickson-2559941.jpg'); */
+    background-position: center;
+    background-size: cover;
+}
+.back-grounds{
+    width: 18rem;
+    height: 6rem;
+    background: white;
+    border-radius: 23px;
+    position: absolute;
+    top:120px;
+    left:80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.back-grounds .theme-change{
+    width: 91px;
+    height: 91px;
+    background: wheat;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 23px;
+}
+.back-grounds .theme-change img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
