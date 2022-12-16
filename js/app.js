@@ -418,3 +418,13 @@ blueColor.addEventListener('click', handleBlueSelected);
 // let playerOne = new Player ('Anthony', 999);
 
 // console.log(playerNameAndHighScore);
+// Sets Audio Volume
+let aud = document.getElementById("sound-button");
+function halfVolume(){
+  aud.volume = 0.1;
+}
+halfVolume();
+
+function playButtonSound(){
+  
+}
