@@ -5,7 +5,7 @@ console.log('Hello, world');
 // Leaderboard table
 let playerNameAndHighScore = [];
 
-function Player (name, score) {
+function Player(name, score) {
   this.name = name;
   this.score = score;
   playerNameAndHighScore.push(this);
@@ -21,7 +21,6 @@ if (localStorage.getItem('player')) {
   let loadedPlayer = localStorage.getItem('player');
   playerNameAndHighScore = JSON.parse(loadedPlayer);
 }
-
 
 console.log(playerNameAndHighScore);
 
@@ -44,32 +43,20 @@ function renderPlayerScore () {
 
 renderPlayerScore();
 
-
-// function testArray () {
-//     for (let i = 0; i < playerNameAndHighScore.length; i++) {
-//         let testName = playerNameAndHighScore[i].name;
-//         let testScore = playerNameAndHighScore[i].score;
-//         console.log(testName);
-//         console.log(testScore);
-//     }
-// }
-
-// testArray();
-
 function scoreChart() {
 
   let names = [];
   let scores = [];
-
   for (let i = 0; i < playerNameAndHighScore.length; i++) {
     names.push(playerNameAndHighScore[i].name);
     scores.push(playerNameAndHighScore[i].score);
-  
+
   }
-  
+
   // Chart sourced from "https://www.chartjs.org/docs/latest/getting-started/"
   // This chart will render the results of each images views and clicks in a bar graph
   const ctx = document.getElementById('myChart');
+
   if (ctx) {
 
     new Chart(ctx, {
@@ -79,6 +66,7 @@ function scoreChart() {
         datasets: [{
           label: 'Scores',
           data: scores,
+          backgroundColor: ["#FF10F0", "#1F51FF", "#FF3131", "#0FFF50", "#FFEA00"],
           borderWidth: 1
         }]
       },
