@@ -13,8 +13,8 @@ function Player(name, score) {
 
 let playerOne = new Player ('Marty', 400);
 let playerTwo = new Player ('Doc', 450);
-let playerThree = new Player ('Biff', 300);
-let playerFour = new Player ('Lorraine', 300);
+let playerThree = new Player ('Biff', 30);
+let playerFour = new Player ('Lorraine', 100);
 
 
 if (localStorage.getItem('player')) {
