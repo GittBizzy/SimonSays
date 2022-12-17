@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
 // Global Variables
-let playerName = '';
+// let playerName = '';
 let userScore = 0;
 let flash = 0;
 let round = 0;
@@ -18,7 +18,7 @@ let powerOn = false;
 
 const scoreBoard = document.getElementById('playerScore');
 const playButton = document.querySelector("#play");
-const onButton = document.querySelector('#onButton');
+const onButton = document.querySelector('.onButton');
 const roundCounter = document.querySelector('#round');
 
 const greenColor = document.getElementById('green');
@@ -111,7 +111,7 @@ function handlePowerButton (event) {
   if (powerOn) {
     on = true
     console.log('button pressed', on);
-    powerOn.classList("on")
+
   } else {
     on = false
     baseColor();
@@ -141,6 +141,8 @@ function playGame() {
 
 // This is for when the computer is running it's turn in the round
 function computerTurn() {
+  // Prevents the player from clicking on the computers turn
+  playable = false;
   on = false
   // if it's the computers turn. run this code
   
@@ -149,6 +151,8 @@ function computerTurn() {
     clearInterval(intervalId);
     compTurn = false;
     baseColor();
+    //Re-enables the player to click
+    playable = true;
     on = true;
   }
   
@@ -172,7 +176,7 @@ function computerTurn() {
 function greenTile() {
   if (sound) {
     let audio = document.getElementById('sound1');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   greenColor.style.backgroundColor = 'lightgreen';
@@ -181,7 +185,7 @@ function greenTile() {
 function redTile() {
   if (sound) {
     let audio = document.getElementById('sound2');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   redColor.style.backgroundColor = 'tomato';
@@ -190,7 +194,7 @@ function redTile() {
 function yellowTile() {
   if (sound) {
     let audio = document.getElementById('sound3');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   yellowColor.style.backgroundColor = 'yellow';
@@ -199,7 +203,7 @@ function yellowTile() {
 function blueTile() {
   if (sound) {
     let audio = document.getElementById('sound4');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   blueColor.style.backgroundColor = 'lightblue';
@@ -344,8 +348,6 @@ function winner() {
   win = true;
 }
 
-console.log('Player:', playerName);
-console.log('Player Score', userScore);
 
 // for( let i = 0; i <40; i++){
 // console.log(getRandomIndex());
@@ -406,6 +408,12 @@ redColor.addEventListener('click', handleRedSelected);
 yellowColor.addEventListener('click', handleYellowSelected);
 blueColor.addEventListener('click', handleBlueSelected);
 
+
+const handlePowerOn = () =>{
+  onButton.classList.toggle('active');
+}
+onButton.addEventListener('click', handlePowerOn);
+
 // // Leaderboard table
 // let playerNameAndHighScore = [];
 
@@ -425,6 +433,5 @@ function halfVolume(){
 }
 halfVolume();
 
-function playButtonSound(){
-  
-}
+function playButtonSound(){}
+
