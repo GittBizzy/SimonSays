@@ -1,6 +1,7 @@
-'use strict'
+'use strict';
 
 // Global Variables
+// let playerName = '';
 let userScore = 0;
 let flash = 0;
 let round = 0;
@@ -17,7 +18,7 @@ let powerOn = false;
 
 const scoreBoard = document.getElementById('playerScore');
 const playButton = document.querySelector("#play");
-const onButton = document.querySelector('#onButton');
+const onButton = document.querySelector('.onButton');
 const roundCounter = document.querySelector('#round');
 
 const greenColor = document.getElementById('green');
@@ -110,7 +111,7 @@ function handlePowerButton (event) {
   if (powerOn) {
     on = true
     console.log('button pressed', on);
-    powerOn.classList("on")
+
   } else {
     on = false
     baseColor();
@@ -140,6 +141,8 @@ function playGame() {
 
 // This is for when the computer is running it's turn in the round
 function computerTurn() {
+  // Prevents the player from clicking on the computers turn
+  playable = false;
   on = false
   // if it's the computers turn. run this code
   
@@ -148,6 +151,8 @@ function computerTurn() {
     clearInterval(intervalId);
     compTurn = false;
     baseColor();
+    //Re-enables the player to click
+    playable = true;
     on = true;
   }
   
@@ -171,7 +176,7 @@ function computerTurn() {
 function greenTile() {
   if (sound) {
     let audio = document.getElementById('sound1');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   greenColor.style.backgroundColor = 'lightgreen';
@@ -180,7 +185,7 @@ function greenTile() {
 function redTile() {
   if (sound) {
     let audio = document.getElementById('sound2');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   redColor.style.backgroundColor = 'tomato';
@@ -189,7 +194,7 @@ function redTile() {
 function yellowTile() {
   if (sound) {
     let audio = document.getElementById('sound3');
-    // audio.play();
+    audio.play();
   }
   sound = true;
   yellowColor.style.backgroundColor = 'yellow';
@@ -197,8 +202,8 @@ function yellowTile() {
 
 function blueTile() {
   if (sound) {
-    let audio = document.getElementById('sound3');
-    // audio.play();
+    let audio = document.getElementById('sound4');
+    audio.play();
   }
   sound = true;
   blueColor.style.backgroundColor = 'lightblue';
@@ -303,13 +308,15 @@ function gameCheck () {
 
   if (!playable) {
     flashColor();
-    // alert(`You LOSE! GOOD DAY!`);
+    if(!win) {
+      alert('GAME OVER');
+      askPlayerName();
+    }
     setTimeout(() => {
       baseColor();
       playGame();
       // if (hardMode) after MVP
-    }, 800);
-
+    }, 500);
     sound = false;
   }
 
@@ -335,10 +342,12 @@ function gameCheck () {
 
 function winner() {
   flashColor();
-  alert(`Congratulations! You WON!`);
+  alert('WINNER!')
+  askPlayerName();
   playable = false;
   win = true;
 }
+
 
 // for( let i = 0; i <40; i++){
 // console.log(getRandomIndex());
@@ -399,15 +408,30 @@ redColor.addEventListener('click', handleRedSelected);
 yellowColor.addEventListener('click', handleYellowSelected);
 blueColor.addEventListener('click', handleBlueSelected);
 
-// Leaderboard table
-let playerNameAndHighScore = [];
 
-function Player (name, score) {
-  this.name = name;
-  this.score = score;
-  playerNameAndHighScore.push(this);
+const handlePowerOn = () =>{
+  onButton.classList.toggle('active');
 }
+onButton.addEventListener('click', handlePowerOn);
 
-let playerOne = new Player ('Anthony', 999);
+// // Leaderboard table
+// let playerNameAndHighScore = [];
 
-console.log(playerNameAndHighScore);
+// function Player (name, score) {
+//   this.name = name;
+//   this.score = score;
+//   playerNameAndHighScore.push(this);
+// }
+
+// let playerOne = new Player ('Anthony', 999);
+
+// console.log(playerNameAndHighScore);
+// Sets Audio Volume
+let aud = document.getElementById("sound-button");
+function halfVolume(){
+  aud.volume = 0.1;
+}
+halfVolume();
+
+function playButtonSound(){}
+
