@@ -11,11 +11,11 @@ function Player(name, score) {
   playerNameAndHighScore.push(this);
 }
 
-// let playerOne = new Player ('Anthony', 999);
-// let playerTwo = new Player ('Nick', 998);
-// let playerThree = new Player ('Paula', 997);
-// let playerFour = new Player ('Jennifer', 996);
-// let playerFive = new Player ('Peter', 995);
+let playerOne = new Player ('Marty', 400);
+let playerTwo = new Player ('Doc', 450);
+let playerThree = new Player ('Biff', 300);
+let playerFour = new Player ('Lorraine', 300);
+
 
 if (localStorage.getItem('player')) {
   let loadedPlayer = localStorage.getItem('player');

@@ -1,5 +1,4 @@
 
-
 header {
   box-shadow: 1px 10px 16px 0px rgba(122, 122, 122, 0.75);
   border-radius: 20px;
@@ -23,7 +22,7 @@ header {
 }
 
 .tutorial {
-  top:30%;
+  top: 30%;
   left: 50%;
   display: flex;
   flex-direction: column;
@@ -39,9 +38,24 @@ header {
   border-radius: 20px;
   color: white;
   box-shadow: 10px 10px 5px 0px rgba(122, 122, 122, 0.75);
-  top:30%;
-  left: 50%
+  top: 30%;
+  left: 50%;
 }
+
+/* .theme ul {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  float: right;
+  position: relative;
+  box-shadow: 5px 5px 5px 0px rgba(122, 122, 122, 0.75);
+}
+
+.theme ul li {
+  display: flex;
+  height: fit-content;
+  padding: 5px;
+} */
 
 /* Buttons */
 .eighties {
@@ -50,7 +64,6 @@ header {
 }
 
 /* Game Board Styling */
-
 .colors {
   border-radius: 50%;
   height: 520px;
@@ -88,10 +101,10 @@ header {
 
 /* Buttons */
 #play {
-  background-color:darkgreen;
+  background-color: darkgreen;
   box-shadow: 0px 3px 0px 0px rgb(34, 34, 34), 0px 7px 10px 0px rgb(17, 17, 17),
-  inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
-  inset 0px -12px 35px 0px rgba(0, 0, 0, 0.5);
+    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+    inset 0px -12px 35px 0px rgba(0, 0, 0, 0.5);
   border: none;
   color: black;
   padding: 20px;
@@ -107,7 +120,7 @@ header {
   left: 31%;
 }
 
-#onButton {
+.onButton {
   position: absolute;
   top: 15%;
   left: 37%;
@@ -124,53 +137,19 @@ header {
   text-shadow: 0px 1px 1px rgba(250, 250, 250, 0.1);
   background-color: rgb(83, 87, 93);
   transition: 0.5s;
+  cursor: grab;
 }
-/* #onButton::before {
-  content: "";
-  height: 20px;
-  width: 60px;
-  border-radius: 20px;
-  z-index: -2;
-  box-shadow: 0px 1px 0px 0px rgba(250, 250, 250, 0.1),
-    inset 0px 1px 2px rgba(0, 0, 0, 0.5);
-} */
 
-#onButton:active {
+.onButton:active, .active {
   box-shadow: 0px 0px 0px 0px rgb(34, 34, 34), 0px 3px 7px 0px rgb(17, 17, 17),
     inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
     inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
   background-color: rgb(83, 87, 93);
   color: #07ff10;
 }
-
-/* #onButton::after {
-  box-shadow: 0px 0px 0px 0px rgb(34, 34, 34), 0px 3px 7px 0px rgb(17, 17, 17),
-    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
-    inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgb(83, 87, 93);
-  color: #07ff10;
-} */
-
-.on {
-  box-shadow: 0px 0px 0px 0px rgb(34, 34, 34), 0px 3px 7px 0px rgb(17, 17, 17),
-    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
-    inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgb(83, 87, 93);
-  color: #07ff10;
-}
-
-#onButton:target {
-  box-shadow: 0px 0px 0px 0px rgb(34, 34, 34), 0px 3px 7px 0px rgb(17, 17, 17),
-    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
-    inset 0px -10px 35px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgb(83, 87, 93);
-  color: rgb(23, 194, 51);
-  text-shadow: 0px 0px 3px rgb(250, 250, 250);
-}
-
 
 /* Score Box */
-#score{
+#score {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,31 +161,25 @@ header {
   /* border: 1px solid red; */
   background-color: rgb(83, 87, 93);
   box-shadow: 0px 3px 0px 0px rgb(34, 34, 34), 0px 7px 10px 0px rgb(17, 17, 17),
-  inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
-  inset 0px -12px 35px 0px rgba(0, 0, 0, 0.5);
-  font-family: 'Courier New', Courier, monospace;
+    inset 0px 1px 1px 0px rgba(250, 250, 250, 0.2),
+    inset 0px -12px 35px 0px rgba(0, 0, 0, 0.5);
+  font-family: "Courier New", Courier, monospace;
   color: #fd4040;
   font-size: 28px;
-  font-weight:bold;
+  font-weight: bold;
   border-radius: 10px;
 }
 
-#score span{
- color: #fd4040;
- text-shadow:
- 0 0 7px rgb(245, 149, 149),
- 0 0 10px rgb(245, 149, 149),
- 0 0 21px rgb(245, 149, 149),
- 0 0 42px rgb(255, 0, 0),
- 0 0 82px rgb(255, 0, 0),
- 0 0 92px rgb(255, 0, 0),
- 0 0 102px rgb(255, 0, 0),
- 0 0 151px rgb(255, 0, 0);
-
+#score span {
+  color: #fd4040;
+  text-shadow: 0 0 7px rgb(245, 149, 149), 0 0 10px rgb(245, 149, 149),
+    0 0 21px rgb(245, 149, 149), 0 0 42px rgb(255, 0, 0),
+    0 0 82px rgb(255, 0, 0), 0 0 92px rgb(255, 0, 0), 0 0 102px rgb(255, 0, 0),
+    0 0 151px rgb(255, 0, 0);
 }
 
-.innerCircle p{
-  font-family: 'Courier New', Courier, monospace;
+.innerCircle p {
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   font-weight: bold;
   color: #ff0000;
@@ -238,6 +211,7 @@ header {
   box-shadow: 0px 0px 25px 2px #fd4040;
   cursor: pointer;
 }
+
 #yellow {
   height: 250px;
   width: 250px;
@@ -300,4 +274,3 @@ header {
     border: 3px solid #333;
     cursor: pointer;
   }
-

@@ -82,4 +82,11 @@ h3 {
   text-align: center;
 }
 
+.buttons {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 60px;
+}
 
