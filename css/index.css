@@ -1,9 +1,3 @@
-/* body {
-  background-color: rgb(137, 137, 137);
-  background-image: url("../img/background.jpg");
-  background-size: 100%;
-  height: 1vw;
-} */
 
 
 header {
@@ -47,30 +41,6 @@ header {
   box-shadow: 10px 10px 5px 0px rgba(122, 122, 122, 0.75);
   top:30%;
   left: 50%
-}
-
-/* .theme ul {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  float: right;
-  position: relative;
-  box-shadow: 5px 5px 5px 0px rgba(122, 122, 122, 0.75);
-}
-
-.theme ul li {
-  display: flex;
-  height: fit-content;
-  padding: 5px;
-} */
-
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: fit-content;
-  font-size: 14px;
 }
 
 /* Buttons */
@@ -293,8 +263,8 @@ footer {
 }
 
   body{
-    min-height: 100vh;
-    /* display: flex; */
+    min-height: auto;
+    min-width: auto;
     justify-content: center;
     align-items: center;
     background: url('../img/palmretro.jpg'); 
