@@ -24,7 +24,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   font-family: "Courier New", monospace;
-  font-size: small;
+  font-size: medium;
 box-shadow: 8px -34px 17px -19px rgb(53, 124, 150);
 -webkit-box-shadow: 8px -34px 17px -19px rgb(46, 101, 121)
 
@@ -33,7 +33,6 @@ box-shadow: 8px -34px 17px -19px rgb(53, 124, 150);
 }
 
 .nick .container .box:hover {
-  overflow-x: hidden;
   width: calc(415px - 30px);
   height: calc(300px - 30px);
   z-index: 10;
@@ -139,14 +138,14 @@ box-shadow: 8px -34px 17px -19px rgb(53, 124, 150);
   box-sizing: border-box;
   border-radius: 10px;
   font-family: "Courier New", monospace;
-  font-size: small;
+  font-size: medium;
   box-shadow: 17px 14px 17px -7px rgba(221,70,70);
 -webkit-box-shadow: 17px 14px 17px -7px rgba(221,70,70);
 }
 
 .paula .containerpd .boxpd:hover {
   width: calc(415px - 30px);
-  height: calc(300px - 30px);
+  height: calc(350px - 30px);
   z-index: 10;
 
 }
@@ -177,7 +176,6 @@ box-shadow: 8px -34px 17px -19px rgb(53, 124, 150);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* font-family: "Courier New", monospace; */
   font-size: 80px;
   transition: 0.5s;
   color: rgb(255, 255, 255);
@@ -249,14 +247,14 @@ box-shadow: 8px -34px 17px -19px rgb(53, 124, 150);
   box-sizing: border-box;
   border-radius: 10px;
   font-family: "Courier New", monospace;
-  font-size: small;
+  font-size: medium;
   box-shadow: 44px -34px 17px -19px rgb(147,71,213);
 -webkit-box-shadow:  17px 14px 17px -7px  rgb(147,71,213);
 }
 
 .anthony .containera .boxa:hover {
   width: calc(415px - 30px);
-  height: calc(305px - 30px);
+  height: calc(355px - 30px);
   z-index: 10;
 }
 
@@ -367,7 +365,7 @@ box-shadow: 8px -34px 17px -19px rgb(53, 124, 150);
   box-sizing: border-box;
   border-radius: 10px;
   font-family: "Courier New", monospace;
-  font-size: small;
+  font-size: medium;
   box-shadow: -16px 12px 10px -3px rgba(36, 159, 74, 0.51);
   -webkit-box-shadow: -16px 12px 10px -3px rgba(36, 159, 74, 0.51);
 }
@@ -477,7 +475,7 @@ box-shadow: 8px -34px 17px -19px rgb(53, 124, 150);
   box-sizing: border-box;
   border-radius: 10px;
   font-family: "Courier New", monospace;
-  font-size: small;
+  font-size: medium;
   box-shadow: -16px 12px 10px -3px rgba(223, 222, 57, 0.51);
   -webkit-box-shadow: -16px 12px 10px -3px rgba(223, 222, 57, 0.51);
 
@@ -616,6 +614,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 
 .back-grounds .theme-change {
@@ -631,4 +630,5 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
